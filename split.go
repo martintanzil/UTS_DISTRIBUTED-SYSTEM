@@ -11,10 +11,10 @@ func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 	
 	for scanner.Scan() {
-		countWords := strings.Split(scanner.Text(), " ")
+		words := strings.Split(scanner.Text(), " ")
 		m := make(map[string]int) 
-    	for _, words := range countWords { 
-        m[words] += 1 
+    	for _, a := range words { 
+        m[a] += 1 
     } 
 	fmt.Println(m)
 	}
